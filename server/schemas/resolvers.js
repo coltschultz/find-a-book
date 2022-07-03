@@ -49,7 +49,7 @@ const resolvers = {
           );
           return userData;
         }
-        throw new AuthenticationError('you need to be logged in to save books');
+        throw new AuthenticationError('You must log in to save a book.');
       },
       removeBook: async (parent, { bookId }, context) => {
         console.log(bookId);
@@ -61,7 +61,7 @@ const resolvers = {
           );
           return userData;
         }
-        throw new AuthenticationError('you need to be logged');
+        throw new AuthenticationError('You must be logged in.');
       }
     }
   };
